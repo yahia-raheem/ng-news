@@ -1,1 +1,127 @@
 /* You can add global styles to this file, and also import other style files */
+@use "./assets/scss/helpers" as h;
+@use "./assets/scss/base/variables" as v;
+@use "./assets/scss/base/typography" as t;
+
+@use "./assets/scss/base/helpers";
+@use "./assets/scss/base/font-face";
+@use "./assets/scss/base/classes";
+
+// Bootstrap customization
+@import "bootstrap/scss/functions";
+
+@import "./assets/scss/base/bootstrap-cust";
+
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+
+@import "bootstrap/scss/bootstrap-grid.scss";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/buttons";
+
+@import "./assets/scss/base/animate";
+
+body {
+  position: relative;
+  z-index: -3;
+}
+
+a {
+  text-decoration: none !important;
+
+  &.btn {
+    padding: h.rem(12) h.rem(14);
+  }
+
+  @media screen and (min-width: 992px) {
+    &.btn {
+      line-height: 1;
+      padding: 1rem;
+    }
+  }
+}
+
+body {
+  background-color: #03152d;
+  text-align: justify;
+}
+
+p.content {
+  font-size: h.rem(18);
+  font-weight: 400;
+  margin-bottom: h.rem(12);
+
+  @media screen and (min-width: 992px) {
+    font-size: h.rem(24);
+    margin-bottom: h.rem(20);
+  }
+}
+
+span.icon-quote {
+  display: inline-table;
+}
+
+.decoration {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  inset-inline-start: 0;
+  overflow: hidden;
+
+  img {
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.chart-container {
+  width: h.rem(773);
+  max-width: 100%;
+}
+
+.media-container {
+  max-width: 100%;
+  object-fit: contain;
+
+  img,
+  video {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+}
+
+.flourish-credit {
+  display: none;
+}

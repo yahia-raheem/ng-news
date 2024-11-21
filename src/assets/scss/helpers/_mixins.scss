@@ -1,0 +1,117 @@
+@use "sass:math";
+@use "bootstrap/scss/vendor/rfs" as * with (
+  $rfs-base-value: 1.4rem,
+  $rfs-rem-value: 10,
+  $rfs-breakpoint: 1900px
+);
+@use "sass:meta";
+@use "queries" as *;
+@use "../base/variables" as v;
+
+@mixin arrow(
+  $direction,
+  $color,
+  $size,
+  $thickness: $size,
+  $solidState: "hollow"
+) {
+  @if $solidState == "solid" {
+    width: 0;
+    height: 0;
+    @if $direction == "up" {
+      border-left: #{$size} solid transparent;
+      border-right: #{$size} solid transparent;
+      border-bottom: #{$size} solid #{$color};
+    }
+    @if $direction == "down" {
+      border-left: #{$size} solid transparent;
+      border-right: #{$size} solid transparent;
+      border-top: #{$size} solid #{$color};
+    }
+    @if $direction == "right" {
+      border-top: #{$size} solid transparent;
+      border-bottom: #{$size} solid transparent;
+      border-left: #{$size} solid #{$color};
+    }
+    @if $direction == "left" {
+      border-top: #{$size} solid transparent;
+      border-bottom: #{$size} solid transparent;
+      border-right: #{$size} solid #{$color};
+    }
+  }
+  @if $solidState == "hollow" {
+    border: solid #{$color};
+    border-width: 0 #{$thickness} #{$thickness} 0;
+    display: inline-block;
+    padding: #{$size};
+    @if $direction == "up" {
+      transform: rotate(-135deg);
+    }
+    @if $direction == "down" {
+      transform: rotate(45deg);
+    }
+    @if $direction == "right" {
+      transform: rotate(-45deg);
+    }
+    @if $direction == "left" {
+      transform: rotate(135deg);
+    }
+  }
+}
+
+@mixin bg-img-mixin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@mixin circle($diameter) {
+  width: $diameter;
+  height: $diameter;
+  border-radius: $diameter;
+}
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+
+  @return $string;
+}
+
+@mixin resp-font-size($desktop-value, $mobile-value: $font-size-base) {
+  font-size: $mobile-value;
+
+  @media screen and (min-width: 390px) {
+    font-size: max(
+      $mobile-value,
+      min($desktop-value, rfs-fluid-value($desktop-value))
+    );
+  }
+}
+
+// @function rem($px) {
+//   @return math.div($px, 16) * 1rem;
+// }
+@function rem($px) {
+  @return math.div($px, 19) * 1rem;
+}
+
+// @mixin paragraph {
+//   @include resp-font-size(1.8rem, 1.4rem);
+
+//   @media screen and (min-width: 390px) {
+//     line-height: 26px;
+//   }
+// }
