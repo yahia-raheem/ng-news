@@ -1,0 +1,30 @@
+@use "../../../../assets/scss/helpers" as h;
+
+.quote-card {
+  padding: h.rem(32);
+  background: rgba(10, 29, 55, 0.9);
+  position: relative;
+  z-index: 5;
+
+  &.show-icon {
+    border-radius: 8px;
+    background: rgba(10, 29, 55, 0.8);
+  }
+
+  span.icon-quote {
+    position: absolute;
+    top: 0;
+    inset-inline-end: h.rem(24);
+    transform: translateY(-50%);
+    font-size: h.rem(30);
+  }
+
+  @media screen and (min-width: 992px) {
+    padding: h.rem(40);
+
+    span.icon-quote {
+      inset-inline-end: h.rem(32);
+      font-size: h.rem(60);
+    }
+  }
+}

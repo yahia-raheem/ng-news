@@ -18,8 +18,8 @@ section.hero {
     max-width: h.rem(676);
     background-color: rgba(4, 30, 54, 0.8);
     backdrop-filter: blur(4px);
-    border-top-left-radius: 24px;
-    border-bottom-right-radius: 24px;
+    border-start-start-radius: 24px;
+    border-end-end-radius: 24px;
 
     .header {
       @include h.decorativeTitle();
@@ -80,8 +80,8 @@ section.hero {
       padding-top: h.rem(53);
       padding-bottom: h.rem(20);
       padding-inline: h.rem(39);
-      border-top-left-radius: 32px;
-      border-bottom-right-radius: 40px;
+      border-start-start-radius: 32px;
+      border-end-end-radius: 40px;
 
       .header {
         padding: h.rem(13) h.rem(24) h.rem(0);
