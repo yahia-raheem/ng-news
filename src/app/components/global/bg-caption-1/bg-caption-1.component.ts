@@ -11,4 +11,7 @@ import { Component, input, ViewEncapsulation } from '@angular/core';
 export class GlobalBgCaption1Component {
   bgImage = input.required<string>()
   lowerDecoration = input<string>()
+  upperDecoration = input<string>()
+  gradient = input<boolean>(false)
+  extraClasses = input<string>('')
 }

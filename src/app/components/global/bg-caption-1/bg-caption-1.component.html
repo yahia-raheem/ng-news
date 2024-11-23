@@ -1,9 +1,19 @@
-<section class="bg-caption-1">
+<section [class]="'bg-caption-1 ' + extraClasses()">
+    @if (upperDecoration()) {
+    <img [src]="upperDecoration()" alt="Decoration" class="decoration upper-decoration d-none d-lg-block">
+    }
+    
     <img [src]="bgImage()" alt="background image" class="bg-image">
+
     <ng-content></ng-content>
+
     @if (lowerDecoration()) {
     <div class="decoration d-none d-lg-block">
         <img [src]="lowerDecoration()" alt="Decoration">
     </div>
+    }
+
+    @if (gradient()) {
+    <div class="gradient"></div>
     }
 </section>
