@@ -1,15 +1,18 @@
 <app-global-central-content bgImage="images/pipes-in-water.png" *appBrowserOnly>
     <app-boat-fishermen-chart />
 
-    <ng-container *ngTemplateOutlet="waterSolFactories"></ng-container>
+    @defer {
+        <ng-container *ngTemplateOutlet="waterSolFactories"></ng-container>
+    
+        <ng-container *ngTemplateOutlet="waterSolFactoriesLocation"></ng-container>
+    
+        <div class="media-container versus">
+            <img src="images/vs.png" alt="versus">
+        </div>
+    
+        <ng-container *ngTemplateOutlet="vs"></ng-container>
+    }
 
-    <ng-container *ngTemplateOutlet="waterSolFactoriesLocation"></ng-container>
-
-    <div class="media-container versus">
-        <img src="images/vs.png" alt="versus">
-    </div>
-
-    <ng-container *ngTemplateOutlet="vs"></ng-container>
 </app-global-central-content>
 
 <ng-template #waterSolFactories>
