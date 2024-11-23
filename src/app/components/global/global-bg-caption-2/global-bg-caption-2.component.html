@@ -1,0 +1,13 @@
+<!-- Caption-bg-2 -->
+
+    <section class="bg-caption-2">
+        @if (uppderDecoration()) {
+            <div class="decoration d-none d-lg-block">
+                <img [src]="uppderDecoration()" alt="Decoration">
+            </div>
+        }
+        <img [src]="bgImage()" alt="background image" class="bg-image">
+    
+       <ng-content></ng-content>
+    
+    </section>

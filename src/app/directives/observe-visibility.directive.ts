@@ -13,11 +13,11 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
   // default show styles
   @Input('show') showStyles: any = { 'opacity': '1', 'transform': 'translateY(0)' };
   // animation duration
-  @Input() duration: number = 400;
+  @Input() duration: number = 500;
   // animation delay
   @Input() delay: number = 0;
   // animation easing
-  @Input() easing: '' | 'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' = '';
+  @Input() easing: '' | 'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' = 'ease-in-out';
   // what percentage should be visible before triggering
   @Input() threshold: number = 0.6;
   // root margin

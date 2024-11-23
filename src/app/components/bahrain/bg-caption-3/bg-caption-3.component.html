@@ -1,0 +1,52 @@
+<app-global-bg-caption-2 bgImage="images/fishermen-at-sea.jpg" uppderDecoration="images/rocks.png">
+    <div class="container d-flex d-lg-none">
+        <div class="row">
+            <div class="col-12">
+                <ng-container *ngTemplateOutlet="quoteCard1"></ng-container>
+                <ng-container *ngTemplateOutlet="quoteCard2"></ng-container>
+            </div>
+            <div class="col-12">
+
+            </div>
+        </div>
+    </div>
+    <div class="d-none d-lg-block">
+        <ng-container *ngTemplateOutlet="quoteCard1"></ng-container>
+        <ng-container *ngTemplateOutlet="quoteCard2"></ng-container>
+    </div>
+
+</app-global-bg-caption-2>
+
+<ng-template #quoteCard1>
+    <app-quote-card>
+        <p>
+            وهو ما يؤكده "البلادي" بقوله: "اختفت أنواع كثيرة من الأسماك التي كانت تتوافر بكميات كبيرة، وكانت
+            تُصدّر خارج
+            البحرين، منها سمك الميد الذي كان متاحًا حتى عام 2002، كان الأطفال من كثرته يصطادونه من على
+            الشواطئ، وكان سعره
+            وقتها لا يتجاوز النصف دينار للكيلو جرام لسهولة صيده، نتيجة تواجده على سطح البحر، ليس كبقية
+            الأنواع التي تحتاج
+            للغوص، أما الآن فلم يعد له وجود. كما اختفى نوع آخر وهو سمك "الصافي"، الذي يتأثر بشدة بالملوحة،
+            ونتيجة تدفق
+            الأملاح عليه إمّا أنها أماتته أو دفعته للهجرة".
+        </p>
+        <p>
+            فيما مضى كان "البلادي" يصطاد 40 كيلو جرامًا في اليوم الواحد تقريبًا، أمّا الآن فلا يمكن لشباكه
+            أن تجمع أكثر من
+            ثلاثة كيلو جرامات، وهي لا تكفي لإعالة عائلة، جاء هذا التراجع نتيجة اختفاء أنواع كثيرة من
+            الأسماك، كالباسج
+            والزمرور والهامور والبدح.
+        </p>
+    </app-quote-card>
+</ng-template>
+
+<ng-template #quoteCard2>
+    <div class="quote-card-2">
+        <p>"ليست الأسماك وحدها التي اختفت؛ بل الروبيان أيضًا، والذي سبق تواجده بكميات هائلة كانت تُصدّر
+            للخارج قد اختفت
+            أيضًا". ويضيف "البلادي": "أحيانًا ما، كان تجار الروبيان المختصون في تجفيفه يرفضون شراء بعض
+            الكميات منّا لعدم
+            توافر مساحات كافية لديهم لتجفيفه، قال لي أحدهم ذات مرّة: تبِّي الديرة تطلع علينا من ريحة
+            الزفرة".</p>
+    </div>
+</ng-template>
