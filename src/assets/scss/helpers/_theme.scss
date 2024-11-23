@@ -40,7 +40,7 @@
     position: absolute;
     bottom: 0;
     inset-inline-start: 50%;
-    transform: translateX(-50%);
+    transform: translateX(50%);
     width: m.rem(110);
     height: 3px;
     background-color: rgba(120, 113, 91, 1);
@@ -52,7 +52,7 @@
     position: absolute;
     bottom: 0;
     inset-inline-start: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(50%, 50%);
     width: 14px;
     height: 14px;
     border-radius: 14px;

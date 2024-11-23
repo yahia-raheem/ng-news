@@ -4,11 +4,12 @@ import { HeroComponent } from "../../components/global/hero/hero.component";
 import { BgCaption1Component } from "../../components/bahrain/bg-caption-1/bg-caption-1.component";
 import { QuoteComponent } from "../../components/bahrain/quote/quote.component";
 import { Meta, Title } from '@angular/platform-browser';
+import { CentralContent1Component } from "../../components/bahrain/central-content-1/central-content-1.component";
 
 @Component({
   selector: 'app-bahrain',
   standalone: true,
-  imports: [HeaderComponent, HeroComponent, BgCaption1Component, QuoteComponent],
+  imports: [HeaderComponent, HeroComponent, BgCaption1Component, QuoteComponent, CentralContent1Component],
   templateUrl: './bahrain.page.html',
   styleUrl: './bahrain.page.scss'
 })

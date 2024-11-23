@@ -1,0 +1,28 @@
+<h5 class="decorative-title-2 mb-5">تراجع آعداد القوراب والصيادين بين ٢٠١٨ و ٢٠٢٢</h5>
+<div class="tabs-container">
+    <div class="controls">
+        <button class="btn" [ngClass]="{selected: selected() === 'num-boats'}" (click)="selectTab('num-boats')">
+            اعداد القوارب
+        </button>
+        <button class="btn" [ngClass]="{selected: selected() === 'num-fishermen'}" (click)="selectTab('num-fishermen')">
+            اعداد الصيادين
+        </button>
+    </div>
+    <div class="chart-container btn-tab" [ngClass]="{'d-none': selected() !== 'num-boats'}">
+        <div class="flourish-embed flourish-chart" data-src="visualisation/20380675">
+            <noscript>
+                <img src="https://public.flourish.studio/visualisation/20380675/thumbnail" width="100%"
+                    alt="chart visualization" />
+            </noscript>
+        </div>
+    </div>
+
+    <div class="chart-container btn-tab" [ngClass]="{'d-none': selected() !== 'num-fishermen'}">
+        <div class="flourish-embed flourish-chart" data-src="visualisation/20342912">
+            <noscript>
+                <img src="https://public.flourish.studio/visualisation/20342912/thumbnail" width="100%"
+                    alt="chart visualization" />
+            </noscript>
+        </div>
+    </div>
+</div>

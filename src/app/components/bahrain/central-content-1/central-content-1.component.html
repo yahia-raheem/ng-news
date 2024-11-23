@@ -1,0 +1,68 @@
+<app-global-central-content bgImage="images/pipes-in-water.png" *appBrowserOnly>
+    <app-boat-fishermen-chart />
+
+    <ng-container *ngTemplateOutlet="waterSolFactories"></ng-container>
+
+    <ng-container *ngTemplateOutlet="waterSolFactoriesLocation"></ng-container>
+
+    <div class="media-container versus">
+        <img src="images/vs.png" alt="versus">
+    </div>
+
+    <ng-container *ngTemplateOutlet="vs"></ng-container>
+</app-global-central-content>
+
+<ng-template #waterSolFactories>
+    <div class="media-container water-plants" observeVisibility>
+        <img src="images/water plants.png" alt="number of water sol factories in bahrain">
+    </div>
+    <app-icon-card>
+        <p>وفق من تحدثت معهم "مواطن" من خبراء وباحثين، إضافة لدراسات علمية منشورة، تسببت محطات تحلية "الدور 1 و 2" في
+            زيادة
+            ملوحة مياه الخليج العربي في البحرين عن المعدلات الطبيعية، بفعل صرف المياه المرتجعة من التحلية في أعماق
+            قليلة،
+            مما أثّر بالسلب على الحيوانات القاعية والحشائش البحرية وبالتبعية على صيادي المنطقة.</p>
+    </app-icon-card>
+</ng-template>
+
+<ng-template #waterSolFactoriesLocation>
+    <h3 class="gulf-map-title decorative-title-2" observeVisibility>٥٨ محطة تحلية في البحرين على ضفاف الخليج العربي</h3>
+
+    <div class="media-container gulf-map" observeVisibility>
+        <iframe aria-label="Map" id="datawrapper-chart-QxUrb" src="https://datawrapper.dwcdn.net/QxUrb/1/"
+            scrolling="no" frameborder="0" style="border: none;" width="600" max-width="100%" height="auto"
+            data-external="1"></iframe>
+    </div>
+</ng-template>
+
+<ng-template #vs>
+    <div class="level1-v-level2" observeVisibility>
+        <div class="row">
+            <img src="images/dots.png" class="dots d-none d-lg-block" alt="">
+            <div class="col-lg-5 col-12 d-flex justify-content-center align-items-center">
+                <p>تقع محطة تحلية "الدور 1" على الساحل الجنوبي الشرقي للبحرين، ودخلت مرحلة التشغيل الكامل بشكل رسمي في
+                    فبراير
+                    2012 لتلبية الطلب المتزايد على مياه الشرب والكهرباء، بسعة يومية إجمالية تبلغ 218 ألف متر مكعب (58
+                    مليون
+                    جالون). تم تطوير المحطة كمشروع بناء وتملك وتشغيل (BOO) بمشاركة القطاع الخاص.</p>
+            </div>
+            <div class="col-lg-7 col-12">
+                <img src="images/level1.png" alt="" class="level-diagram">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7 col-12 order-last order-lg-first">
+                <img src="images/level2.png" alt="" class="level-diagram">
+            </div>
+            <div class="col-lg-5 col-12 order-first order-lg-last d-flex justify-content-center align-items-center">
+                <p>وفي مارس 2019، وبعد سبع سنوات من تشغيل محطة "الدور 1"، وقّعت اتفاقية تدشين محطة جديدة باسم محطة
+                    "الدور 2" على
+                    مساحة تتجاوز 192 ألف متر مربع، بهدف توليد 1500 ميجاوات من الطاقة، على أساس تقنية توربينات الغاز ذات
+                    الدورة
+                    المركبة (CCGT)، وتحلية 58 مليون جالون من المياه يوميًا عبر تقنية التناضح العكسي لمياه البحر -التي
+                    تستخدمها
+                    محطة "الدور 1" أيضًا- ودخلت مرحلة التشغيل الكامل في الربع الثاني من العام 2022.</p>
+            </div>
+        </div>
+    </div>
+</ng-template>

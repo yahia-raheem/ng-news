@@ -1,0 +1,16 @@
+<!-- Central-content-1 -->
+    <section [class]="extraClasses() + ' central-content'">
+        @if (bgImage()) {
+            <img [src]="bgImage()" class="bg-image">
+        }
+        @if (upperDecoration()) {
+            <img [src]="upperDecoration()" alt="" class="decoration">
+        }
+        <div class="container content-container">
+            <div class="row">
+                <div class="col-12 d-flex flex-column justify-content-start align-items-center">
+                    <ng-content></ng-content>
+                </div>
+            </div>
+        </div>
+    </section>
