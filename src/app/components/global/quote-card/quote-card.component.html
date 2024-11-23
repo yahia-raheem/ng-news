@@ -1,4 +1,4 @@
-<div class="quote-card" [ngClass]="{'show-icon': showIcon()}">
+<div [class]="'quote-card ' + extraClasses()" [ngClass]="{'show-icon': showIcon()}">
     @if (showIcon()) {
     <span class="icon-quote">
         <span class="path1"></span>

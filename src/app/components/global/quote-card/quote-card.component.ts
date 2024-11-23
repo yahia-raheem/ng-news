@@ -10,4 +10,5 @@ import { Component, input } from '@angular/core';
 })
 export class QuoteCardComponent {
   showIcon = input<boolean>(false)
+  extraClasses = input<string>('')
 }
