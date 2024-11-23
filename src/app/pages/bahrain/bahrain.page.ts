@@ -8,11 +8,12 @@ import { CentralContent1Component } from "../../components/bahrain/central-conte
 import { BgCaption2Component } from '../../components/bahrain/bg-caption-2/bg-caption-2.component';
 import { CentralContent2Component } from "../../components/bahrain/central-content-2/central-content-2.component";
 import { BgCaption3Component } from "../../components/bahrain/bg-caption-3/bg-caption-3.component";
+import { CentralContent3Component } from '../../components/bahrain/central-content-3/central-content-3.component';
 
 @Component({
   selector: 'app-bahrain',
   standalone: true,
-  imports: [HeaderComponent, HeroComponent, BgCaption1Component, QuoteComponent, CentralContent1Component, BgCaption2Component, CentralContent2Component, BgCaption3Component],
+  imports: [HeaderComponent, HeroComponent, BgCaption1Component, QuoteComponent, CentralContent1Component, BgCaption2Component, CentralContent2Component, BgCaption3Component, CentralContent3Component],
   templateUrl: './bahrain.page.html',
   styleUrl: './bahrain.page.scss'
 })
