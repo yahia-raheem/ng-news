@@ -1,6 +1,6 @@
 <section [class]="'bg-caption-1 ' + extraClasses()">
     @if (upperDecoration()) {
-    <img [src]="upperDecoration()" alt="Decoration" class="decoration upper-decoration d-none d-lg-block">
+    <img [src]="upperDecoration()" alt="Decoration" class="decoration upper-decoration d-none d-lg-block" [ngClass]="{'d-none d-lg-block': !upperDecorationAlt(), 'top-0': upperDecorationAlt()}">
     }
     
     <img [src]="bgImage()" alt="background image" class="bg-image">
