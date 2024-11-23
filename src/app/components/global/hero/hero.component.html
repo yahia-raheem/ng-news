@@ -6,7 +6,7 @@
     </video>
     <div class="container d-flex flex-column justify-content-center align-items-center">
         <div class="spacer"></div>
-        <div class="card d-flex flex-column justify-content-center align-items-center" *appBrowserOnly
+        <div class="card d-flex flex-column justify-content-center align-items-center"
             observeVisibility>
             <div class="header">
                 <p>{{cardTitle()}}</p>
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="spacer"></div>
-        <footer class="d-flex flex-column justify-content-center align-items-center" *appBrowserOnly observeVisibility>
+        <footer class="d-flex flex-column justify-content-center align-items-center" observeVisibility>
             <p>{{footerText()}}</p>
             <a [href]="buttonLink()" class="btn btn-primary">
                 <span>{{buttonText()}}</span>

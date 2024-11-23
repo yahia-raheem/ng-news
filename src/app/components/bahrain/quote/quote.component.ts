@@ -1,13 +1,12 @@
 import { Component, signal, ViewChild, viewChild } from '@angular/core';
 import { QuoteCardComponent } from "../../global/quote-card/quote-card.component";
 import { PopupComponent } from "../../global/popup/popup.component";
-import { BrowserOnlyDirective } from '../../../directives/browser-only.directive';
 import { ObserveVisibilityDirective } from '../../../directives/observe-visibility.directive';
 
 @Component({
   selector: 'app-quote',
   standalone: true,
-  imports: [QuoteCardComponent, PopupComponent, BrowserOnlyDirective, ObserveVisibilityDirective],
+  imports: [QuoteCardComponent, PopupComponent, ObserveVisibilityDirective],
   templateUrl: './quote.component.html',
   styleUrl: './quote.component.scss'
 })

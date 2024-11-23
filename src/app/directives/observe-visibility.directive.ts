@@ -1,6 +1,7 @@
-import { AfterViewInit, Directive, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, Renderer2 } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, EventEmitter, Inject, Input, OnDestroy, OnInit, Output, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { animate, AnimationBuilder, AnimationPlayer, style } from '@angular/animations';
 import { Subject } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
   selector: '[observeVisibility]',
@@ -38,14 +39,17 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
   constructor(
     private _element: ElementRef,
     private _renderer: Renderer2,
-    private _builder: AnimationBuilder
+    private _builder: AnimationBuilder,
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) { }
 
   ngOnInit() {
-    this.setHideStyles();
-    this.createObserver();
-    this.createAnimation();
-    this.startObserving();
+    if (isPlatformBrowser(this.platformId)) {
+      this.setHideStyles();
+      this.createObserver();
+      this.createAnimation();
+      this.startObserving();
+    }
   }
 
   ngAfterViewInit() {

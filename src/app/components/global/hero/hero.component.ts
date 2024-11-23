@@ -1,11 +1,10 @@
 import { Component, input } from '@angular/core';
 import { ObserveVisibilityDirective } from '../../../directives/observe-visibility.directive';
-import { BrowserOnlyDirective } from '../../../directives/browser-only.directive';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [ObserveVisibilityDirective, BrowserOnlyDirective],
+  imports: [ObserveVisibilityDirective],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
