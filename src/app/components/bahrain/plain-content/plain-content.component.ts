@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { ObserveVisibilityDirective } from '../../../directives/observe-visibility.directive';
 
 @Component({
@@ -6,7 +6,8 @@ import { ObserveVisibilityDirective } from '../../../directives/observe-visibili
   standalone: true,
   imports: [ObserveVisibilityDirective],
   templateUrl: './plain-content.component.html',
-  styleUrl: './plain-content.component.scss'
+  styleUrl: './plain-content.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class PlainContentComponent {
 

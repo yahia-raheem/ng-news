@@ -1,4 +1,4 @@
-import { Component, signal, ViewChild, viewChild } from '@angular/core';
+import { Component, signal, ViewChild, viewChild, ViewEncapsulation } from '@angular/core';
 import { QuoteCardComponent } from "../../global/quote-card/quote-card.component";
 import { PopupComponent } from "../../global/popup/popup.component";
 import { ObserveVisibilityDirective } from '../../../directives/observe-visibility.directive';
@@ -8,7 +8,8 @@ import { ObserveVisibilityDirective } from '../../../directives/observe-visibili
   standalone: true,
   imports: [QuoteCardComponent, PopupComponent, ObserveVisibilityDirective],
   templateUrl: './quote.component.html',
-  styleUrl: './quote.component.scss'
+  styleUrl: './quote.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class QuoteComponent {
   isPopupVisible = signal<boolean>(false)

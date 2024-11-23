@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ViewEncapsulation } from '@angular/core';
 import { ObserveVisibilityDirective } from '../../../directives/observe-visibility.directive';
 
 @Component({
@@ -6,7 +6,8 @@ import { ObserveVisibilityDirective } from '../../../directives/observe-visibili
   standalone: true,
   imports: [ObserveVisibilityDirective],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss'
+  styleUrl: './hero.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class HeroComponent {
   bgVid = input.required<string>()
