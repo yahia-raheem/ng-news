@@ -26,6 +26,7 @@ export class AppComponent {
       } else {
         this.loadCSS('vendor/bootstrap-grid.min.css')
       }
+      this.loadJS('https://public.flourish.studio/resources/embed.js')
     }
   }
 
@@ -39,5 +40,16 @@ export class AppComponent {
     // Set type of the link item and path to the css file
     this.renderer2.setProperty(style, 'rel', 'stylesheet');
     this.renderer2.setProperty(style, 'href', filename);
+  }
+
+  loadJS(url: string) {
+    // Create a link element via Angular's renderer to avoid SSR troubles
+    const script = this.renderer2.createElement('script') as HTMLLinkElement;
+
+    // Add the style to the head section
+    this.renderer2.appendChild(this.document.body, script);
+
+    // Set type of the link item and path to the css file
+    this.renderer2.setProperty(script, 'src', url);
   }
 }
